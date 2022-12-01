@@ -33,7 +33,7 @@ namespace EdnaWebApi.Controllers
         // GET api/values/history?type=snap&pnt=something&strtime=30/11/2016/00:00:00&endtime=30/11/2016/23:59:00&secs=60
         // GET api/values/real?pnt=something
         [HttpGet("{id}", Name = "GetData")]
-        public object GetData(string id, [FromQuery] string pnt = "WRLDC.PHASOR.WRDC0783", [FromQuery] string strtime = "30/11/2016/00:00:00", [FromQuery] string endtime = "30/11/2016/23:59:00", [FromQuery] int secs = 60, [FromQuery] string type = "snap", [FromQuery] string service = "WRDCMP.SCADA1")
+        public object GetData(string id, string? pnt = "WRLDC.PHASOR.WRDC0783", string? strtime = "30/11/2016/00:00:00", string? endtime = "30/11/2016/23:59:00", int secs = 60, string? type = "snap", string? service = "WRDCMP.SCADA1")
         {
             int nret = 0;
             string format = "dd/MM/yyyy/HH:mm:ss";
