@@ -2,7 +2,7 @@
 https://docs.microsoft.com/en-us/dotnet/core/deploying/#publish-self-contained
 
 ```
-dotnet publish -r win-x64 .\src\EdnaWebApi\EdnaWebApi.csproj
+dotnet publish -r win-x64 -p:PublishReadyToRun=true .\src\EdnaWebApi\EdnaWebApi.csproj
 ```
 
 ### run dotnet server at custom port
